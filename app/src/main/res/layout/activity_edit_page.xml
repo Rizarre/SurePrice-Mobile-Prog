@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".EditPage">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#FDFD66"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/lblStore1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:text="Puregold Store"
+                android:textColor="@color/black" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/imgStore1"
+                    android:layout_width="226dp"
+                    android:layout_height="228dp"
+                    android:contentDescription="Nothing" />
+
+                <LinearLayout
+                    android:id="@+id/LytStore1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/lblPureGoldName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:minWidth="48dp"
+                        android:text="N/A"
+                        android:textAlignment="center"
+                        android:textColor="@color/black" />
+
+                    <TextView
+                        android:id="@+id/lblPureGoldPrice"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:minWidth="48dp"
+                        android:minHeight="48dp"
+                        android:text="0"
+                        android:textAlignment="center"
+                        android:textColor="@color/black" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/lblStore2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:text="SM Store"
+                android:textColor="@color/black" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/imgStore2"
+                    android:layout_width="226dp"
+                    android:layout_height="228dp"
+                    android:contentDescription="Nothing" />
+
+                <LinearLayout
+                    android:id="@+id/LytStore2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/lblSMName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:minWidth="48dp"
+                        android:minHeight="48dp"
+                        android:text="N/A"
+                        android:textAlignment="center"
+                        android:textColor="@color/black" />
+
+                    <TextView
+                        android:id="@+id/lblSMPrice"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:minWidth="48dp"
+                        android:minHeight="48dp"
+                        android:text="0"
+                        android:textAlignment="center"
+                        android:textColor="@color/black" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.7"
+                    android:orientation="vertical">
+
+                    <EditText
+                        android:id="@+id/txtCustomName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:hint="Enter Name of Product"
+                        android:inputType="textPersonName"
+                        android:minWidth="48dp"
+                        android:minHeight="48dp"
+                        android:textAlignment="center" />
+
+                    <EditText
+                        android:id="@+id/txtCustomPrice"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:hint="Enter Price of Product"
+                        android:inputType="numberDecimal"
+                        android:minWidth="48dp"
+                        android:minHeight="48dp"
+                        android:textAlignment="center" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/LyFinalize"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btnRemoveItem"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="RemoveItems"
+                    android:text="Remove Items" />
+
+                <Button
+                    android:id="@+id/btnNextItem"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="NextItem"
+                    android:text="Next" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

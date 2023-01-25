@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CompareActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#FDFD66">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/imgLogo2"
+                android:layout_width="226dp"
+                android:layout_height="228dp"
+                android:layout_margin="10dp"
+                app:srcCompat="@drawable/sureprice" />
+
+            <TextView
+                android:id="@+id/lblSearch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:text="Enter Product name here: "
+                android:textColor="@color/black" />
+
+            <EditText
+                android:id="@+id/txtInput"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:gravity="center"
+                android:hint="Search here"
+                android:inputType="textPersonName"
+                android:minWidth="48dp"
+                android:minHeight="48dp"
+                android:textAlignment="center" />
+
+            <Button
+                android:id="@+id/btnSearch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="SearchProducts"
+                android:text="Search" />
+
+            <TextView
+                android:id="@+id/lblStore1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:text="Puregold Store"
+                android:textColor="@color/black" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="25dp"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/imgStore1"
+                    android:layout_width="226dp"
+                    android:layout_height="228dp"
+                    android:contentDescription="Nothing" />
+
+                <LinearLayout
+                    android:id="@+id/LytStore1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/lblPureGoldName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:minWidth="48dp"
+                        android:text="N/A"
+                        android:textAlignment="center"
+                        android:textColor="@color/black" />
+
+                    <TextView
+                        android:id="@+id/lblPureGoldPrice"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:minWidth="48dp"
+                        android:minHeight="48dp"
+                        android:text="0"
+                        android:textAlignment="center"
+                        android:textColor="@color/black" />
+
+                    <Button
+                        android:id="@+id/btnStore1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:onClick="NextStore1"
+                        android:text="@string/next"
+                        android:visibility="gone" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/lblStore2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:text="SM Store"
+                android:textColor="@color/black" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="25dp"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/imgStore2"
+                    android:layout_width="226dp"
+                    android:layout_height="228dp"
+                    android:contentDescription="Nothing" />
+
+                <LinearLayout
+                    android:id="@+id/LytStore2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/lblSMName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:minWidth="48dp"
+                        android:minHeight="48dp"
+                        android:text="N/A"
+                        android:textAlignment="center"
+                        android:textColor="@color/black" />
+
+                    <TextView
+                        android:id="@+id/lblSMPrice"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:minWidth="48dp"
+                        android:minHeight="48dp"
+                        android:text="0"
+                        android:textAlignment="center"
+                        android:textColor="@color/black" />
+
+                    <Button
+                        android:id="@+id/btnStore2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:onClick="NextStore2"
+                        android:text="@string/next"
+                        android:visibility="gone" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/lblCustom"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:gravity="center"
+                android:text="Enter the extra product and price of item you want to compare (optional)"
+                android:textAlignment="center"
+                android:textColor="@color/black" />
+
+            <LinearLayout
+                android:id="@+id/LyCustom"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="25dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.7"
+                    android:orientation="vertical">
+
+                    <EditText
+                        android:id="@+id/txtCustomName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:hint="Enter Name of Product"
+                        android:inputType="textPersonName"
+                        android:minWidth="48dp"
+                        android:minHeight="48dp"
+                        android:textAlignment="center" />
+
+                    <EditText
+                        android:id="@+id/txtCustomPrice"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:hint="Enter Price of Product"
+                        android:inputType="numberDecimal"
+                        android:minWidth="48dp"
+                        android:minHeight="48dp"
+                        android:textAlignment="center" />
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/btnCustom"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="CustomAdd"
+                    android:text="ADD" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/LyFinalize"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btnNext"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="NextButton"
+                    android:text="Add Items" />
+
+                <Button
+                    android:id="@+id/btnCheck"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="CheckList"
+                    android:text="Check List" />
+
+                <Button
+                    android:id="@+id/btnReset"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="ResetList"
+                    android:text="Reset List" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

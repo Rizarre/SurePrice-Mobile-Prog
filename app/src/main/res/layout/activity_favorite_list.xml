@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FavoriteList">
+
+    <ScrollView
+        android:id="@+id/svFavList"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/SplashScreenBackground"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btnRemove"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:onClick="btnRemove"
+                    android:text="Remove from Favorites" />
+
+                <Button
+                    android:id="@+id/btnEditFavList"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:onClick="btnEdit"
+                    android:text="Edit" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/lblTableName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="24sp" />
+
+            <TableLayout
+                android:id="@+id/tblFavList"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/black"
+                android:gravity="center">
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#85e085"
+                    android:gravity="center">
+
+                    <TextView
+                        android:id="@+id/lblStore1ProductName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Puregold"
+                        android:textAlignment="center"
+                        android:textColor="@color/black" />
+
+                    <TextView
+                        android:id="@+id/lblStore1ProductPrice"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Price"
+                        android:textAlignment="center"
+                        android:textColor="@color/black" />
+
+                    <TextView
+                        android:id="@+id/lblStore2ProductName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="SM"
+                        android:textAlignment="center"
+                        android:textColor="@color/black" />
+
+                    <TextView
+                        android:id="@+id/lblStore2ProductPrice"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Price"
+                        android:textAlignment="center"
+                        android:textColor="@color/black" />
+
+                    <TextView
+                        android:id="@+id/lblCustomProductName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="User"
+                        android:textAlignment="center"
+                        android:textColor="@color/black" />
+
+                    <TextView
+                        android:id="@+id/lblCustomProductPrice"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Price"
+                        android:textAlignment="center"
+                        android:textColor="@color/black" />
+                </TableRow>
+            </TableLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

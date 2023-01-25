@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ViewList">
+
+    <ScrollView
+        android:id="@+id/svViewLlist"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/SplashScreenBackground"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TableLayout
+                android:id="@+id/tblData"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/black"
+                android:gravity="center">
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#85e085"
+                    android:gravity="center">
+
+                    <TextView
+                        android:id="@+id/lblStore1ProductName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Puregold"
+                        android:textAlignment="center"
+                        android:textColor="@color/black" />
+
+                    <TextView
+                        android:id="@+id/lblStore1ProductPrice"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Price"
+                        android:textAlignment="center"
+                        android:textColor="@color/black" />
+
+                    <TextView
+                        android:id="@+id/lblStore2ProductName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="SM"
+                        android:textAlignment="center"
+                        android:textColor="@color/black" />
+
+                    <TextView
+                        android:id="@+id/lblStore2ProductPrice"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Price"
+                        android:textAlignment="center"
+                        android:textColor="@color/black" />
+
+                    <TextView
+                        android:id="@+id/lblCustomProductName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="User"
+                        android:textAlignment="center"
+                        android:textColor="@color/black" />
+
+                    <TextView
+                        android:id="@+id/lblCustomProductPrice"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Price"
+                        android:textAlignment="center"
+                        android:textColor="@color/black" />
+                </TableRow>
+
+            </TableLayout>
+
+            <LinearLayout
+                android:id="@+id/LyViewOptions"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btnFavorite"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:onClick="btnFavorite"
+                    android:text="Save Current List" />
+
+                <Button
+                    android:id="@+id/btnEditCurrent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:onClick="btnEdit"
+                    android:text="Remove Items" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/LyAddtoFavOptions"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/edtFaveName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:layout_weight="1"
+                    android:ems="10"
+                    android:hint="Enter name of list..."
+                    android:inputType="textPersonName"
+                    android:minHeight="48dp"
+                    android:visibility="invisible" />
+
+                <Button
+                    android:id="@+id/btnAdd"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:layout_weight="1"
+                    android:onClick="btnAdd"
+                    android:text="Add"
+                    android:visibility="invisible" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

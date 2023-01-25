@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar" />
+    <style name="LIGHTMODE" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+        <item name="buttonStyle">@color/dark_gray</item>
+        <item name="android:windowBackground">@color/white</item>
+    </style>
+    <style name="DARKMODE" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+        <item name="buttonStyle">@color/light_gray</item>
+        <item name="android:windowBackground">@color/dark_gray</item>
+    </style>
+</resources>
